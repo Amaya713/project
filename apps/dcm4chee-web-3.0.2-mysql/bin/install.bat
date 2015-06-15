@@ -9,7 +9,7 @@ if "%OS%" == "Windows_NT" set DIRNAME=%~dp0%
 
 set WEB3_HOME=%DIRNAME%..
 set WEB3_SERV=%WEB3_HOME%\server\default
-set VERS=3.0.1
+set VERS=3.0.2
 set WEB3_CHECK=%WEB3_SERV%\lib\dcm4chee-web-urlprovider-%VERS%.jar
 
 if exist "%WEB3_CHECK%" goto found_web3
