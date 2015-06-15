@@ -19,23 +19,13 @@
          APR (HTTP/AJP) Connector: /docs/apr.html
          Define a non-SSL HTTP/1.1 Connector on port 8080
     -->
-  <!--  <Connector port="8080" address="${jboss.bind.address}"    
+   <Connector port="8080" address="${jboss.bind.address}"    
          maxThreads="250" maxHttpHeaderSize="8192"
          emptySessionPath="true" protocol="HTTP/1.1"
          enableLookups="false" redirectPort="8443" acceptCount="100"
-         connectionTimeout="20000" disableUploadTimeout="true" />
+         connectionTimeout="20000" disableUploadTimeout="true" 
+         />
 
-		 -->
-		 
-		 <!-- SSL/TLS Connector configuration for mutual TLS -->
-<Connector port="443" protocol="HTTP/1.1" SSLEnabled="true" 
-    address="${jboss.bind.address}"
-	maxThreads="100" strategy="ms" maxHttpHeaderSize="8192"
-	emptySessionPath="true"
-	scheme="https" secure="true" clientAuth="false" 
-	keystoreFile="${jboss.server.home.dir}/conf/my.keystore"
-	keystorePass="mypass"
-	sslProtocol = "TLS" />
     <!-- Define a SSL HTTP/1.1 Connector on port 8443
          This connector uses the JSSE configuration, when using APR, the 
          connector should be using the OpenSSL style configuration
